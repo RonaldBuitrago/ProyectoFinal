@@ -44,22 +44,6 @@ export class LoginComponent {
       error: () => {
         this.mensaje = 'Error al iniciar sesión.';
       }
-  // onSubmit() {
-  //   if (this.form.invalid) {
-  //     this.mensaje = 'Por favor completa los campos correctamente.';
-  //     return;
-  //   }
-
-  //   this.api.loginUsuario(this.form.value).subscribe({
-  //     next: (res: any) => {
-  //       localStorage.setItem('token', res.token);
-  //       this.mensaje = 'Inicio de sesión exitoso.';
-  //       this.router.navigate(['/dashboard']);
-  //     },
-  //     error: (err) => {
-  //       console.error(err);
-  //       this.mensaje = 'Error al iniciar sesión.';
-  //     }
     });
   }
 }
