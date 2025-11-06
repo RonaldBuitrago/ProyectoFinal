@@ -1,0 +1,39 @@
+<div class="container">
+  <h2>Gestión de Libros</h2>
+
+  <form [formGroup]="libroForm" (ngSubmit)="agregarLibro()" class="libro-form">
+    <input type="text" placeholder="Título" formControlName="titulo" />
+    <input type="text" placeholder="Autor" formControlName="autor" />
+    <input type="text" placeholder="tema" formControlName="tema" />
+    <button type="submit">{{ editando ? 'Actualizar Libro' : 'Agregar Libro' }}</button>
+    <button *ngIf="editando" type="button" (click)="cancelarEdicion()">Cancelar</button>
+  </form>
+
+<hr />
+
+  <p *ngIf="mensaje" class="mensaje">{{ mensaje }}</p>
+
+  <h3>Listado de libros</h3>
+  <div *ngIf="libros.length; else sinLibros" class="libros-lista">
+    <div class="libro-card" *ngFor="let libro of libros">
+      <h4>{{ libro.titulo }}</h4>
+      <p>Autor: {{ libro.autor }}</p>
+      <p>tema: {{ libro.tema }}</p>
+
+    <div *ngIf="libro.librerias?.length > 0">
+      <p><strong>Disponible en:</strong></p>
+      <ul>
+      <li *ngFor="let lib of libro.librerias">{{ lib.nombre }} ({{ lib.direccion }})</li>
+      </ul>
+  </div>
+
+      <button (click)="editarLibro(libro)">Editar</button>
+      <button (click)="eliminarLibro(libro._id)">Eliminar</button>
+    </div>
+  </div>
+
+  <ng-template #sinLibros>
+    <p>No hay libros registrados.</p>
+  </ng-template>
+</div>
+

@@ -1,0 +1,16 @@
+<h2>Gestión de Librerías</h2>
+
+<form [formGroup]="libreriaForm" (ngSubmit)="crearLibreria()">
+  <input formControlName="nombre" placeholder="Nombre de la librería">
+  <input formControlName="direccion" placeholder="Dirección">
+  <button type="submit">Agregar Librería</button>
+</form>
+
+<hr>
+
+<h3>Listado de Librerías</h3>
+<ul>
+  <li *ngFor="let lib of librerias">
+     {{ lib.nombre }} - {{ lib.direccion }}
+  </li>
+</ul>
