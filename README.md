@@ -29,6 +29,13 @@ Antes de iniciar asegúrate de tener instalado:
 - [MongoDB](https://www.mongodb.com/try/download/community)
 - [Angular CLI](https://angular.io/cli)
 - Git (opcional, para clonar el repositorio)
+---
+Usuarios para LOGIN
+user: luis@prueba.com
+pass: 123456
+
+user: ronald@prueba.com
+pass: 654321
 
 ---
 Instalación Backend
