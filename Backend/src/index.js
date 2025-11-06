@@ -17,7 +17,7 @@ console.log(" Rutas cargadas correctamente:", {
 
 const app = express();
 
-// Conexión a la base de datos
+// Conexión a la bd
 conexionDB();
 
 // Middlewares
