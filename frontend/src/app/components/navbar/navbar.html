@@ -1,0 +1,62 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary px-3">
+  <a class="navbar-brand fw-bold text-warning" routerLink="/dashboard">Gran Biblioteca BIT</a>
+
+
+  <ul class="navbar-nav ms-auto">
+    <li *ngIf="isLoggedIn" class="nav-item">
+      <a class="nav-link" routerLink="/libros">Libros</a>
+    </li>
+    <li *ngIf="isLoggedIn" class="nav-item">
+      <a class="nav-link" routerLink="/librerias">Librerías</a>
+    </li>
+    <li *ngIf="isLoggedIn" class="nav-item">
+      <a class="nav-link" (click)="logout()">Cerrar sesión</a>
+    </li>
+    <li *ngIf="!isLoggedIn" class="nav-item">
+      <a class="nav-link" routerLink="/login">Iniciar sesión</a>
+    </li>
+  </ul>
+</nav>
+
+
+
+
+  <!-- <div class="collapse navbar-collapse">
+    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <li class="nav-item">
+        <a routerLink="/dashboard" routerLinkActive="active" class="nav-link">Inicio</a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="/libros" routerLinkActive="active" class="nav-link">Libros</a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="/librerias" routerLinkActive="active" class="nav-link">Librerías</a>
+      </li>
+    </ul>
+
+  <div class="d-flex">
+    <button *ngIf="!isLoggedIn" class="btn btn-outline-light me-2" routerLink="/login">
+       Iniciar sesión
+      </button>
+      <button *ngIf="isLoggedIn" class="btn btn-light text-primary" (click)="logout()">
+        Cerrar sesión
+      </button>
+    </div>
+  </div> -->
+<!-- </nav> -->
+  <!-- <ul class="nav-links">
+    <li><a routerLink="/dashboard" routerLinkActive="activo">Inicio</a></li>
+    <li><a routerLink="/libros" routerLinkActive="activo">Libros</a></li>
+    <li><a routerLink="/librerias" routerLinkActive="activo">Librerías</a></li> -->
+
+    <!-- <li *ngIf="!isLoggedIn">
+      <a routerLink="/login" routerLinkActive="activo">Iniciar sesión</a>
+      <a *ngIf="isLoggedIn" (click)="logout()">Cerrar sesión</a> 
+    </li> -->
+
+    <!-- <li *ngIf="usuario">
+      <span class="usuario">Hola, {{ usuario.nombre }}</span>
+      <button (click)="cerrarSesion()">Cerrar sesión</button>
+    </li> -->
+  <!-- </ul> -->
+

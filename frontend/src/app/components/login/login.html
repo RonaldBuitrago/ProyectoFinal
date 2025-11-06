@@ -1,0 +1,19 @@
+<div class="login-container">
+  <h2>Iniciar Sesión</h2>
+
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <input type="email" placeholder="Correo" formControlName="correo" />
+    <div *ngIf="form.get('correo')?.invalid && form.get('correo')?.touched">
+      Ingresa un correo válido.
+    </div>
+
+    <input type="password" placeholder="Contraseña" formControlName="contraseña" />
+    <div *ngIf="form.get('contraseña')?.invalid && form.get('contraseña')?.touched">
+      Mínimo 6 caracteres.
+    </div>
+
+    <button type="submit" [disabled]="form.invalid">Ingresar</button>
+  </form>
+
+  <p *ngIf="mensaje">{{ mensaje }}</p>
+</div>
