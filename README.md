@@ -93,7 +93,7 @@ frontend/
 └── angular.json
 
 
-## 🧭 Instrucciones Generales de Git
+Instrucciones Generales de Git
 
 Clonar el repositorio
 
